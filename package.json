@@ -17,9 +17,6 @@
   "esnext": "dist/react-babylonjs.js",
   "type": "module",
   "typings": "dist/react-babylonjs.d.ts",
-  "files": [
-    "dist"
-  ],
   "author": "Brian Zinn <github@wakeskate.com>",
   "repository": {
     "type": "git",
@@ -30,6 +27,7 @@
     "node": ">=6.0.0"
   },
   "scripts": {
+    "prepare": "npm run build",
     "lint": "tslint -t codeFrame 'src/**/*.ts'",
     "prebuild": "rimraf dist",
     "build": "cross-env NODE_ENV=production rollup -c",
